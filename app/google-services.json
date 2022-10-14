@@ -1,0 +1,304 @@
+{
+  "project_info": {
+    "project_number": "25203963838",
+    "firebase_url": "https://maksab-32ef2.firebaseio.com",
+    "project_id": "maksab-32ef2",
+    "storage_bucket": "maksab-32ef2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:98b61597a881ed57",
+        "android_client_info": {
+          "package_name": "sd.maksab.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-5hia4vloc4o1vgt0cfg6i7pmrp4n3gu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sd.maksab.customer",
+            "certificate_hash": "bd2b80732d895a0607b2960b5516cea4424ac6d9"
+          }
+        },
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:69949066efc3a50ae96bef",
+        "android_client_info": {
+          "package_name": "sd.maksab.customer.local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:956f94c7665f7057",
+        "android_client_info": {
+          "package_name": "sd.maksab.customer.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-2p0vdmno559j342kg4pgluo73fe5hs5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sd.maksab.customer.staging",
+            "certificate_hash": "bd2b80732d895a0607b2960b5516cea4424ac6d9"
+          }
+        },
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:37a24bd5178f2ef8",
+        "android_client_info": {
+          "package_name": "sd.maksab.operations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:bc7bbcee090fa1b9e96bef",
+        "android_client_info": {
+          "package_name": "sd.maksab.operations.local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:7bcd18cc247b9516",
+        "android_client_info": {
+          "package_name": "sd.maksab.operations.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:bd731f7d8fc1184b",
+        "android_client_info": {
+          "package_name": "sd.maksab.provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-gnqevm30qucu9lnp3r40raockqactp6g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sd.maksab.provider",
+            "certificate_hash": "bd2b80732d895a0607b2960b5516cea4424ac6d9"
+          }
+        },
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:fd61ee6c74a7086fe96bef",
+        "android_client_info": {
+          "package_name": "sd.maksab.provider.local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25203963838:android:59f9f241fdd13b42",
+        "android_client_info": {
+          "package_name": "sd.maksab.provider.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25203963838-c0u9aobfge9d0i6nkkmbegtgi4r8tg4u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sd.maksab.provider.staging",
+            "certificate_hash": "bd2b80732d895a0607b2960b5516cea4424ac6d9"
+          }
+        },
+        {
+          "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbK6p7Zu3X2h3jC_zhQi_YGG3qQZAdyzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25203963838-k9o3octcsh8fu9820c6l5dlichi2vf2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

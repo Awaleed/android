@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    android:padding="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <ImageView
+            android:id="@+id/store_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/placeholder"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:layout_marginTop="7dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/store_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="متجر السعادة"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:layout_weight="70"
+                android:textColor="@color/black"
+                android:layout_marginStart="4dp"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:layout_gravity="end|center_horizontal"
+                android:gravity="end|center_horizontal"
+                android:padding="2dp"
+                android:layout_marginEnd="7dp">
+
+                <TextView
+                    android:id="@+id/distance_in_kms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 ك"/>
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/ic_location2"
+                    android:layout_marginEnd="10dp"/>
+
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/ic_green_star"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:id="@+id/store_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.0"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/store_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="المتجر يقدم خدمات بيع السراميك ومواد البناء بجميع اشكالها , نسعى لرضاكم دائما"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

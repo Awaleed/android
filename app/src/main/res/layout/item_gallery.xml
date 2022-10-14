@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/gallery_item"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/gradient_bg"
+        android:src="@drawable/placeholder" />
+
+    <ImageView
+        android:id="@+id/image_type_imageview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|end"
+        android:padding="8dp"
+        app:tint="@color/white"
+        app:srcCompat="@drawable/ic_baseline_videocam_24" />
+
+    <TextView
+        android:id="@+id/specialty_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_gravity="bottom|start"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        tools:text="@string/specialty" />
+
+    <TextView
+        android:id="@+id/gallery_count_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_remove_red_eye_24"
+        android:textSize="12sp"
+        android:padding="4dp"
+        android:layout_gravity="top|end"
+        android:drawableTint="@color/white"
+        android:textColor="@color/white"
+        tools:text="4010" />
+
+</FrameLayout>

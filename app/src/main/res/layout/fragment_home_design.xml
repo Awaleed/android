@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.main.fragments.HomeDesignFragment"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        />
+
+   <LinearLayout
+       android:id="@+id/category_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:visibility="gone">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/maksab_services"
+           android:layout_marginTop="20dp"
+           android:layout_marginStart="15dp"
+           android:layout_marginLeft="15dp"
+           android:textStyle="bold"
+           android:textSize="23sp"
+           android:textColor="@color/black"
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/categories_recyclerview">
+
+       </androidx.recyclerview.widget.RecyclerView>
+   </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/offer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maksab_offers"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            />
+        <FrameLayout
+            android:id="@+id/offers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/common_specialities_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/most_request_service"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            />
+        <FrameLayout
+            android:id="@+id/common_specialities_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

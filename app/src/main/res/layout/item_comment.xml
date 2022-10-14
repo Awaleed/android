@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/list_item_comment_userimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/placeholder"
+            app:shapeAppearanceOverlay="@style/circleImageView"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:id="@+id/list_item_comment_fullname"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:layout_gravity="start"
+                 android:gravity="start"
+                 android:textAlignment="viewStart"
+                 android:textColor="@color/colorAccent"
+                 android:textStyle="bold"
+                 android:textSize="15sp"
+                 tools:text="علي محمد" />
+
+
+             <TextView
+                 android:id="@+id/list_item_createdon"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="3dp"
+                 android:layout_weight="1"
+                 android:gravity="end"
+                 android:textColor="@color/red"
+                 android:textSize="14sp"
+                 tools:text="قبل ساعتين"
+                 android:layout_marginEnd="3dp"
+                 android:layout_marginRight="3dp" />
+
+         </LinearLayout>
+
+            <TextView
+                android:id="@+id/list_item_comment_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="عايز اعرف نوع المكيف شنو وهل المشكلة دي بتحصل في السنة مرة ولا كل شهر بس؟ لانه دا بغير عليه كل شي يا استاذ , ف لو حددت لينا الموضوع يكون احسن" />
+
+            <ImageView
+                android:id="@+id/comment_image"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

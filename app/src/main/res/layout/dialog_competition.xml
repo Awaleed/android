@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مسابقة مكسب"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_event"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"/>
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            tools:text="نرجو من جمي المتسابقين مشاركة الرابط في جميع مواقع التواصل لتحصلو على اعلي نقاط ممكنه ثم اعلان نتيجة الفوزر باحدكم قريبا"
+            android:layout_marginTop="20dp"/>
+
+        <CheckBox
+            android:id="@+id/close_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="لا تظهر هذه الرسالة مرة أخرى"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   شارك الرابط لأصدقائك   "
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/sharebtn"
+
+            />
+    </LinearLayout>
+  </FrameLayout>
+

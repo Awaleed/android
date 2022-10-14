@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      android:padding="18dp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center">
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+           android:layout_weight="2"
+           android:text="@string/please_select_address"/>
+
+       <Button
+           android:id="@+id/add_new_address"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+           android:layout_weight="1"
+           android:backgroundTint="@color/colorAccent"
+           android:text="@string/add_address"
+           android:textColor="@color/white"
+           android:textStyle="bold" />
+
+   </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/items_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/main_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/no_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="210dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_data"
+                android:textColor="@color/default_gray"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>

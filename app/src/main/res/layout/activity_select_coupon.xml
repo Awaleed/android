@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.lookups.activities.SelectCouponActivity"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:padding="16dp">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/do_you_have_coupon"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:textSize="22sp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_gravity="center"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_marginEnd="8dp"
+               android:layout_height="wrap_content">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/coupon"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/add_coupon_here"
+                   android:gravity="top|start"
+                   android:lines="1"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <Button
+               android:id="@+id/apply_code"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:gravity="center"
+               android:layout_gravity="center"
+               android:backgroundTint="@color/colorAccent"
+               android:text="@string/use_coupon" />
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/coupon_status"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/red"
+           android:layout_marginTop="7dp"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/or_choose_from_coupon_list"
+           android:textColor="@color/black"
+           android:layout_marginTop="16dp"
+           android:layout_marginBottom="8dp"
+           android:textStyle="bold"
+           android:textSize="22sp" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+
+       <ProgressBar
+           android:id="@+id/main_progress"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="120dp"
+           android:visibility="gone" />
+
+       <include layout="@layout/layout_no_items" />
+   </LinearLayout>
+
+</LinearLayout>

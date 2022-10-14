@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginBottom="1dp"
+    card_view:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/notification_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            tools:text="عرض سعر" />
+
+        <TextView
+            android:id="@+id/notification_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            tools:text="قبل يومين" />
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notification_date"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="المويه باردة والسخان ما شغلته من فترة طويلة؟" />
+
+        <ImageView
+            android:id="@+id/notification_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/notification_title"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="4dp"
+            tools:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/notification_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notification_title"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toRightOf="@id/notification_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/light_gray"
+            tools:text="عايز ليك فني #سباكة #مكيفات #رسيرفرات وأي مهنة صيانة تانية؟ اطلب الآن واستخدم البروموكود ENJOY920 واحصل على خصم 100 جنيه وبجيك الفني في الموعد اللي تحدده 😍" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

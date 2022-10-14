@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="1dp"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="18dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/district_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+               android:layout_weight="50"
+                android:text="حي الملك فهد"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="19sp"/>
+
+
+            <TextView
+                android:id="@+id/transportation_price"
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="300"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textSize="19sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

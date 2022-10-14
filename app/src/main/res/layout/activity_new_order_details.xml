@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.orders.activities.OrderDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            android:visibility="visible">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/offers_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offers_list"
+                app:chipBackgroundColor="@color/chip_color"
+                android:textColor="@color/tag_text_colors"
+                style="@style/ChoiceChip"
+                android:tag="0"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/order_info_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_detials"
+                app:chipBackgroundColor="@color/chip_color"
+                android:textColor="@color/tag_text_colors"
+                style="@style/ChoiceChip"
+                android:tag="1"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chat_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المحادثة"
+                app:chipBackgroundColor="@color/chip_color"
+                android:textColor="@color/tag_text_colors"
+                style="@style/ChoiceChip"
+                android:tag="2"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+               />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/invoice_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invoice"
+                app:chipBackgroundColor="@color/chip_color"
+                android:textColor="@color/tag_text_colors"
+                style="@style/ChoiceChip"
+                android:tag="3"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/order_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_managment"
+                app:chipBackgroundColor="@color/chip_color"
+                android:textColor="@color/tag_text_colors"
+                style="@style/ChoiceChip"
+                android:tag="4"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>

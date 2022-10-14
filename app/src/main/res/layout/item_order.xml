@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginBottom="1dp"
+    card_view:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/order_number_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/order_number" />
+
+        <TextView
+            android:id="@+id/order_number_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/order_number_label_textview"
+            android:layout_toRightOf="@id/order_number_label_textview"
+            android:textColor="@color/black"
+            tools:text="59" />
+
+        <TextView
+            android:id="@+id/order_creation_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            tools:text="5 days ago" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/order_creation_date_textview"
+            android:layout_toLeftOf="@id/order_creation_date_textview"
+            android:text="@string/order_creation_date_label" />
+
+        <TextView
+            android:id="@+id/order_type_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_number_label_textview"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/order_type_label" />
+
+        <TextView
+            android:id="@+id/order_type_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_number_textview"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/order_type_label_textview"
+            android:layout_toRightOf="@id/order_type_label_textview"
+            android:textColor="@color/black"
+            tools:text="فحص" />
+
+        <TextView
+            android:id="@+id/order_status_value_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/order_type_textview"
+            android:layout_alignBottom="@+id/order_type_textview"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:gravity="start"
+            tools:text="جديد" />
+
+        <TextView
+            android:id="@+id/order_status_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/order_status_value_textview"
+            android:layout_toStartOf="@id/order_status_value_textview"
+            android:layout_toLeftOf="@id/order_status_value_textview"
+            android:text="@string/order_status_label" />
+
+
+        <TextView
+            android:id="@+id/order_specialty_type_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_status_label_textview"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/service_type_label" />
+
+        <TextView
+            android:id="@+id/order_specialty_type_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_type_textview"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/order_specialty_type_label_textview"
+            android:layout_toRightOf="@id/order_specialty_type_label_textview"
+            android:textColor="@color/black"
+            tools:text="سباكة" />
+
+        <LinearLayout
+            android:id="@+id/prices_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_status_value_textview"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_label" />
+
+            <TextView
+                android:id="@+id/order_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                tools:text="500" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_send_to_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_specialty_type_label_textview"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/order_send_to_label" />
+
+        <TextView
+            android:id="@+id/order_send_to_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_specialty_type_textview"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/order_send_to_label_textview"
+            android:layout_toRightOf="@id/order_send_to_label_textview"
+            android:textColor="@color/black"
+            tools:text="10 مقدمين" />
+
+        <LinearLayout
+            android:id="@+id/avg_prices_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prices_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_avg_label" />
+
+            <TextView
+                android:id="@+id/order_price_avg_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="500" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

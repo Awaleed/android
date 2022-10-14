@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "sd.maksab.customer"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 63
+        versionName "3.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders.cleartextTrafficPermitted ="false"
+        }
+        debug {
+            manifestPlaceholders.cleartextTrafficPermitted ="true"
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def flavor = variant.name
+            def versionCode = variant.versionCode
+
+            def time = System.currentTimeMillis()
+            outputFileName = "maksab_customer_${flavor}_${versionCode}_${time}.apk"
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        local {
+            dimension "version"
+            applicationIdSuffix '.local'
+            resValue "string", "app_flavor_type", "local"
+            buildConfigField 'String', 'ApiBaseUrl', '"http://10.0.2.2:40657/api/v1/"';
+            buildConfigField 'String', 'IdentityBaseUrl', '"http://10.0.2.2:56314/api/v1/"';
+            buildConfigField 'String', 'ChatBaseUrl', '"http://10.0.2.2:32054/chathub"';
+            buildConfigField 'String', 'TopicName', '"customers.local"';
+            manifestPlaceholders = [appIcon: "@drawable/test"]
+            manifestPlaceholders = [appLabel: "@string/app_test_name"]
+            buildConfigField 'boolean', 'testMode', 'true';
+        }
+        staging {
+            dimension "version"
+            applicationIdSuffix '.staging'
+            resValue "string", "app_flavor_type", "staging"
+            buildConfigField 'String', 'ApiBaseUrl', '"https://api.maksab-app.com/api/v1/"';
+            buildConfigField 'String', 'IdentityBaseUrl', '"https://identity.maksab-app.com/api/v1/"';
+            buildConfigField 'String', 'ChatBaseUrl', '"https://chat.maksab-app.com/chathub"';
+            buildConfigField 'String', 'TopicName', '"customers.staging"';
+            manifestPlaceholders = [appIcon: "@drawable/test"]
+            manifestPlaceholders = [appLabel: "@string/app_test_name"]
+            buildConfigField 'boolean', 'testMode', 'true';
+        }
+        production {
+            dimension "version"
+            resValue "string", "app_flavor_type", "production"
+            buildConfigField 'String', 'ApiBaseUrl', '"https://api.maksab.sd/api/v1/"';
+            buildConfigField 'String', 'IdentityBaseUrl', '"https://identity.maksab.sd/api/v1/"';
+            buildConfigField 'String', 'ChatBaseUrl', '"https://chat.maksab.sd/chathub"';
+            buildConfigField 'String', 'TopicName', '"customers"';
+            buildConfigField 'boolean', 'testMode', 'false';
+            manifestPlaceholders = [appIcon: "@mipmap/ic_launcher"]
+            manifestPlaceholders = [appLabel: "@string/app_name"]
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Android Libraries
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation 'com.google.firebase:firebase-core:18.0.2'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Google Map
+    implementation 'com.google.android.gms:play-services-maps:18.0.1'
+    implementation 'com.google.android.gms:play-services-location:19.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    // REST Library
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    // Binding Library
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+
+    // UI Library & Other Library
+    implementation 'com.romandanylyk:pageindicatorview:1.0.1@aar'
+    implementation 'com.stepstone.stepper:material-stepper:4.3.1'
+    implementation 'com.github.badoualy:stepper-indicator:1.0.7'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.1.1'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'com.github.GoodieBag:Pinview:v1.3'
+    implementation 'com.github.mklimek:frame-video-view:1.3.3'
+    implementation 'io.branch.sdk.android:library:2.19.5'
+    implementation 'com.github.travijuu:numberpicker:1.0.7'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'me.himanshusoni.quantityview:quantity-view:1.2.0'
+
+    // Audio Player/Recorder
+    implementation 'com.github.3llomi:RecordView:3.0.2'
+    implementation 'com.github.rygelouv:android-audio-sensei:0.1.2'
+
+    // Video
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+    implementation "im.ene.kohii:kohii-core:1.1.0.2011003"
+    implementation "im.ene.kohii:kohii-exoplayer:1.1.0.2011003"
+    implementation "com.google.android.exoplayer:exoplayer:2.11.3"
+
+    // Chat Library
+    implementation 'com.microsoft.signalr:signalr:3.0.0'
+
+    //images libs
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}

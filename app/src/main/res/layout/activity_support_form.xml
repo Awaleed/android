@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ededed">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/ms_white"
+        android:fillViewport="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:gravity="center"
+                        android:text="@string/do_you_have_any_question"
+                        android:textColor="@color/ms_black" />
+
+                    <EditText
+                        android:id="@+id/formtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:padding="8dp"
+                        android:background="@drawable/border_gray"
+                        android:hint="@string/address" />
+
+                    <EditText
+                        android:id="@+id/formbdy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:padding="8dp"
+                        android:gravity="top"
+                        android:background="@drawable/border_gray"
+                        android:lines="3"
+                        android:hint="@string/feedback_body" />
+
+                    <Button
+                        android:id="@+id/send_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="@string/send_now"
+                        android:textColor="@color/white"
+                        android:background="@color/colorAccent" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#ededed"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:text="@string/call_us_from_option"
+                    android:textColor="@color/ms_black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/callus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/maintenance"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_call_black_24dp"
+                        android:padding="4dp"/>
+
+                    <Button
+                        android:id="@+id/clean_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/cleaning"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_call_black_24dp"
+                        android:padding="4dp"/>
+
+                    <Button
+                        android:id="@+id/callus_women"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/beautiful"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_call_black_24dp"
+                        android:padding="4dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

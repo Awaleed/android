@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="maksab.sd.customer">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyD2o63j5XZNopnUg4AFpJvI99J7vbF_3AM" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!--
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".basecode.utility.Appliction"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="${cleartextTrafficPermitted}"
+        tools:replace="android:label">
+        <activity
+            android:name=".ui.general.activities.TransportationPricesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.providers.activties.ProviderInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.tickets.activities.AddTicketWizardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.general.activities.ContactusActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.general.activities.FaqsListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.general.activities.CreditsPointsActivity"
+            android:exported="true" />
+        <activity android:name=".notifications.ui.NotificationDetailActivity" />
+        <activity android:name=".ui.orders.activities.OrderConfirmationActivity" />
+        <activity android:name=".ui.lookups.activities.SelectImageActivity" />
+        <activity android:name=".ui.main.activties.SpecialOffersDetailsActivity" />
+        <activity android:name=".wizards.neworder.NewOrderWizardActivity" />
+        <activity android:name=".ui.sections.activities.SectionsHomeLayoutActivity" />
+        <activity android:name=".ui.lookups.activities.SelectCouponActivity" />
+        <activity android:name=".ui.lookups.activities.SelectDateTimeActivity" />
+        <activity android:name=".ui.orders.activities.SelectServiceActivity" />
+        <activity android:name=".ui.lookups.activities.SelectLookupActivity" />
+        <activity android:name=".ui.tickets.activities.TicketsActivity" />
+        <activity android:name=".ui.general.activities.ChooseLocationActivity" />
+        <activity android:name=".ui.general.activities.AddNewAddressActivity" />
+        <activity android:name=".ui.media.custom_capture.ImageCaptureActivity" />
+        <activity android:name=".ui.media.custom_capture.VideoCaptureActivity" />
+        <activity android:name=".ui.media.viewer.VideoViewerActivity" />
+        <activity android:name=".ui.entities.CenterActivity" />
+        <activity android:name=".ui.entities.ShopActivity" />
+        <activity android:name=".ui.orders.activities.ServicesActivity" />
+
+        <activity
+            android:name=".ui.general.activities.AddressListActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.orders.activities.OffersActivity"
+            android:exported="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAkc5anA5WLXVMCnvFI115PbGnUE5HRMS8" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.general.activities.SplashActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="maksabcustomer" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="maksabcustomer.app.link"
+                    android:scheme="https" />
+                <data
+                    android:host="maksabcustomer-alternate.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.profile.activities.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.profile.activities.VerifyOtpActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.profile.activities.MobileOtpActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.orders.activities.OrdersListActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ui.orders.activities.OrderDetailsActivity" />
+        <activity android:name=".ui.tickets.activities.TicketDetailsActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ui.main.activties.MainActivity" />
+        <activity android:name=".ui.providers.activties.ProviderListActivity" />
+        <activity android:name=".ui.providers.activties.ProviderDetailsActivity" />
+        <activity android:name=".ui.providers.activties.FavouritesProvidersActivity" />
+        <activity android:name=".ui.main.activties.SupportFormActivity" />
+        <activity android:name=".util.general.ForceUpdateScreen" />
+        <activity android:name=".ui.main.activties.TermsActivity" />
+        <activity android:name=".wizards.registeration.RegistrationActivity" />
+        <activity android:name=".wizards.welcome.WizardActivity" />
+        <activity android:name=".ui.general.activities.FaqDetailActivity" />
+        <activity
+            android:name=".util.general.ImageZoomingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.profile.activities.ProfileActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <receiver android:name=".ui.profile.broadcasts.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".notifications.helpers.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notifications.helpers.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.providers.activties.RatingActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_live_ajrJ4iL5M1XN3lTXP82QXhnnqvheodxI" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_dkATWnH7VW8L0eV4H9XP5lojqyeglgz0" /> <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />
+
+        <receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.providers.activties.GalleryItemDetalisActivityOld"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".ui.main.activties.SelectSpecialtyActivity" />
+        <activity android:name=".ui.providers.activties.GalleryItemDetailsActivity" />
+        <activity android:name=".ui.main.activties.ItemsListActivity" />
+        <activity android:name=".ui.main.activties.BalanceActivity" />
+    </application>
+
+</manifest>

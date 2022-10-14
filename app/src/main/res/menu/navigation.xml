@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_location"
+        android:icon="@drawable/ic_home"
+        android:title="البداية"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_orders"
+        android:icon="@drawable/ic_order"
+        android:title="الطلبات"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_ticckets"
+        android:icon="@drawable/ic_ticket"
+        android:title="المساعدة"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notification"
+        android:title="التنبيهات"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings2"
+        android:title="الإعدادات"
+        android:enabled="true"/>
+</menu>

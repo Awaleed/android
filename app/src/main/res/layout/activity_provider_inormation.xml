@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.orders.activities.OrderDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/basic_info_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المعلومات الأساسية"
+                android:textColor="@color/white"
+                android:checkable="false"
+                android:clickable="true"
+                android:focusable="true"
+                app:chipIcon="@drawable/ic_info_white"
+                app:chipBackgroundColor="@color/colorPrimary"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/customers_rate_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تقيمات العملاء"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:checkable="false"
+                android:clickable="true"
+                android:focusable="true"
+                app:chipIcon="@drawable/ic_baseline_star_rate_24_white"
+                app:chipBackgroundColor="@color/colorAccent"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/gallery_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المعرض"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:checkable="false"
+                android:clickable="true"
+                android:focusable="true"
+                app:chipIcon="@drawable/ic_image_gallery_svgrepo_com"
+                app:chipBackgroundColor="@color/yellow"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

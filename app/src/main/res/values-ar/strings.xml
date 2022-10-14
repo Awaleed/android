@@ -1,0 +1,510 @@
+<resources>
+    <string name="app_name">مكسب</string>
+    <string name="app_test_name">اختبار - العميل</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">الطـلبات</string>
+    <string name="error">حصل خطأ ما</string>
+    <string name="internetError">الرجاء حاول مرة اخرى</string>
+    <string name="enableGps">يجب عليك تفعيل خدمة الموقع حتي نتمكن من جلب مقدمي الخدمات بناء على موقعك الحالي</string>
+    <string name="NoInternet">جهازك غير متصل بالانترنت تاكد من توصيل جهازك على الانترنت لان جميع خدمات التطبيق مبينة على الانترنت</string>
+    <string name="pleaseEnterNumber">الرجاء ادخال رقم هاتف صحيح</string>
+    <string name="imageUploaded">تم تحديث الصوره بنجاح</string>
+    <string name="imageUploadError">حدث خطأ اثناء رفع الصورة</string>
+    <string name="enterotpCode">تم ارسال رمز التحقق الى</string>
+    <string name="smsPerm">حتي نتمكن من قراءة الكود المرسل للجوال بشكل تلقائي يجب منح صلاحية قراءه الرسائل</string>
+    <string name="give_per">منح صلاحية</string>
+    <string name="ok">حسناً</string>
+    <string name="chooseSource">حدد مصدر الصورة</string>
+    <string name="Galary">معرض الصور</string>
+    <string name="Camera">الكاميرا</string>
+    <string name="no_close">لا , اريد الخروج من التطبيق</string>
+    <string name="iconnect_theInternet">قمت بتوصيل الانترنت</string>
+    <string name="orders">الطلبات</string>
+    <string name="noDescription">لا يوجد وصف اضافي</string>
+    <string name="order_type">"نوع الطـلب : "</string>
+    <string name="no_providers">لا يوجد مقدمين نسعى لإضافة المزيد</string>
+    <string name="no_favorite">لا يوجد مقدمين في المفضلة </string>
+    <string name="name">الأسـم</string>
+    <string name="gender">الجنـس</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="save_profile">حفظ الملف الشخصي</string>
+    <string name="cancel_order">إلغاء الطلب</string>
+    <string name="location">المـوقع</string>
+    <string name="rating_note">هل لديك ملاحظة؟</string>
+    <string name="rate_the_provider">قيم المقدم</string>
+    <string name="select_rate">الرجاء اختر التقييم المناسب اولاً</string>
+    <string name="save_rating">شكرا لجعلك مكسب افضل برأيك في المقدمين</string>
+    <string name="pleaseInterFIeld">الرجاء قم بإدخال جميع الحقول</string>
+    <string name="thanksForMakeMaksabBetter">شكراً لجعلك مكسب أفضل برسالتك هذه، سيتم التواصل معك بأقرب فرصة ممكنة</string>
+    <string name="favorite">أطلب مباشرة من المقدمين</string>
+    <string name="rating_provider">تقيم مقدم</string>
+    <string name="sure_rating_provider">هل أنت متأكد من تقيم المقدم؟</string>
+    <string name="bio">نبذة عن مقدم الخدمة</string>
+    <string name="accept_offer">قبول</string>
+    <string name="faq">كيف يعمل التطبيق</string>
+    <string name="warining_text">ملاحظة: قم بالرد على استفسارات المقدمين حتى تحصل على عروض اسعار للخدمة التي تريدها، ولضمان حقوقك كعميل ومتابعة الطلب فيجب ان يكون كل التواصل مع المقدمين داخل التطبيق فقط</string>
+    <string name="please_add_data">من فضلك قم بادخال البيانات المطلوبة</string>
+    <string name="not_receving">لم تحصل على رمز التحقق؟</string>
+    <string name="resend_otp">اعادة الارسال</string>
+    <string name="arrival_time">وقت الوصول</string>
+    <string name="seconds">ثانية</string>
+    <string name="call_us">لديك مشكلة؟ اتصل بنا</string>
+    <string name="welcome_to_app">مرحباً بك في تطبيق مكسب</string>
+    <string name="one_step">سجل بخطوة</string>
+    <string name="update_your_mobile">تغيير رقم جوالك</string>
+    <string name="please_enter_otp">من فضلك ادخل رمز التحقق</string>
+    <string name="your_rate">ماهو تقييمك لمقدم الخدمة؟</string>
+    <string name="rate_quality">جودة الخدمة</string>
+    <string name="wow">رائع</string>
+    <string name="provider_behavior">سلوك والتزام المقدم</string>
+    <string name="open_complain">أريد رفع شكوى في هذا الطلب</string>
+    <string name="excellant">ممتاز</string>
+    <string name="good">جيد</string>
+    <string name="bad">سيئ</string>
+    <string name="very_bad">سيئ جداً</string>
+    <string name="slogan">كل خدماتك في تطبيق واحد</string>
+    <string name="offers">أخر العروض</string>
+    <string name="provider_details">تفاصيل مقدم الخدمة</string>
+    <string name="next">التالي</string>
+    <string name="start_now">إبدأ الآن</string>
+    <string name="join_login">إنضم لأسرة مكسب واحصل على افضل العروض والخدمات</string>
+    <string name="enter_mobile">ادخل رقم جوال يبدأ ب 09 او 01</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="helps">المساعدة</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="my_account">حسابي</string>
+    <string name="public_notification">اعلانات</string>
+    <string name="private_notification">تنبيهات</string>
+    <string name="read_all">قرائة الكل</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="are_you_sure">هل أنت متأكد</string>
+    <string name="no_data">لا توجد بيانات لعرضها</string>
+    <string name="image_viewer">عرض الصورة</string>
+    <string name="enter_all_data_validation">الرجاء قم بإدخال كافة البيانات المطلوبة</string>
+    <string name="add_new_ticket">اضافة تذكرة جديدة</string>
+    <string name="choose_ticket_category">إختر التصنيف الأساسي</string>
+    <string name="enter_ticket_details">من فضلك زودنا بالتفاصيل حتى نساعدك</string>
+    <string name="enter_any_details">أدخل كافة التفاصيل المتعلقة</string>
+    <string name="ticket_details">تفاصيل التذكرة</string>
+    <string name="your_input_here">اكتب رسالتك هنا...</string>
+    <string name="open_tickets">مفتوحة</string>
+    <string name="closed_tickets">مغلقة</string>
+    <string name="ticket_category">التصنيف الأساسي</string>
+    <string name="ticket_subcategory">التصنيف الفرعي</string>
+    <string name="add_ticket">اضف تذكرة</string>
+    <string name="waiting">منتظرة</string>
+    <string name="opening">مفتوحة</string>
+    <string name="completed">منتهية</string>
+    <string name="order_number">رقم الطلب : </string>
+    <string name="cancelled">ملغية</string>
+    <string name="order_creation_date_label">التاريخ : </string>
+    <string name="order_type_label">نوع الطـلب : </string>
+    <string name="order_status_label">الحالة : </string>
+    <string name="service_type_label">نوع الخدمة : </string>
+    <string name="price_label">السعر : </string>
+    <string name="not_specified">غير محدد</string>
+    <string name="order_send_to_label">ارسل الى : </string>
+    <string name="price_avg_label">متوسط العروض : </string>
+    <string name="mobile">رقم الجوال</string>
+    <string name="address_type">نوع العنوان</string>
+    <string name="floor_number">رقم الطابق</string>
+    <string name="add_address">أضف عنوان</string>
+    <string name="enter_your_home_address">العنوان - معلم بارز لوصف البيت</string>
+    <string name="save">حفظ</string>
+    <string name="your_balance">رصيدك</string>
+    <string name="have_question">لديك سؤال؟</string>
+    <string name="have_question_description">اذا كان لديك أي سؤال او استفسار يرجى اضافة تذكرة وسيتم التجاوب معك في أقرب فرصة ممكنة</string>
+    <string name="we_happpy_contacting_us">سنكون سعيدين بالاجابة على أسئلتك</string>
+    <string name="use_this_balance_anytime">تستطيع استخدام رصيدك في الطلبات لتحصل على خصم مباشر في أي وقت يكون لديك رصيد</string>
+    <string name="prices">الأسعار</string>
+    <string name="execuation_price">سعر التنفيذ</string>
+    <string name="balance_discount">خصم الرصيد</string>
+    <string name="coupon_discount">خصم بروموكود</string>
+    <string name="maksab_insurance_amount">رسوم ضمان مكسب</string>
+    <string name="transportation_amount">رسوم المواصلات</string>
+    <string name="spears_total_price">سعر المواد / قطع الغيار</string>
+    <string name="guarantee">الضمان</string>
+    <string name="guarantee_days">فترة الضمان بالأيام</string>
+    <string name="days">أيام</string>
+    <string name="guarantee_status">حالة الضمان</string>
+    <string name="guarantee_end_date">ينتهي الضمان بتاريخ</string>
+    <string name="guarantee_description">بامكانك الحصول على الضمان اذا تكررت المشكلة وكان الضمان ساري وطبقت الشروط الخاصة بالحصول على التعويض</string>
+    <string name="total_price">الاجمالي</string>
+    <string name="enter_profile_info">أدخل بيانات ملفك الشخصي</string>
+    <string name="how_do_you_know_maksab">كيف تعرفت على مكسب؟</string>
+    <string name="you_registered_successfully">تم تسجيلك بنجاح</string>
+    <string name="you_updating_successfully">تم تحديث بياناتك بنجاج</string>
+    <string name="happy_time_use_app">نتمنى لك وقتاً سعيداً مع مكسب</string>
+    <string name="welcome_message_new_customer">سنأخذ بعض البيانات حتى يكتمل ملفك</string>
+    <string name="welcome_message_old_customer">محتاجين أقل من دقيقة نحدث حسابك في مكسب</string>
+    <string name="soon">قريباً</string>
+    <string name="please_wait_soon_will_activated">سيتم فتح هذه الخدمة في القريب، كن على استعداد!</string>
+    <string name="provider_info">بيانات المقدم</string>
+    <string name="choose_time">إختر الوقت</string>
+    <string name="choose_address">إختر العنوان</string>
+    <string name="add_coupon">إختر البروموكود</string>
+    <string name="add_images">الصور</string>
+    <string name="time_selected">تم اختيار الوقت</string>
+    <string name="do_you_have_coupon">لديك بروموكود؟</string>
+    <string name="add_coupon_here">اكتبه هنا</string>
+    <string name="use_coupon">استخدام</string>
+    <string name="or_choose_from_coupon_list">أو اختر البرموكود من القائمة التالية</string>
+    <string name="no_coupons_avialable">لا توجد أكواد تخفيض متاحة الآن</string>
+    <string name="change_provider">تغيير المقدم</string>
+    <string name="change_provider_description">بإمكانك تغيير مقدم الخدمة في حال لم يتجاوب معك وقبل أن يبدأ بالعمل على الطلب</string>
+    <string name="you_can_easly_change_the_provider">تستطيع اختيار مقدم خدمة أخر للعمل في الطلب</string>
+    <string name="price">السعر</string>
+    <string name="execution_type">نوع التنفيذ</string>
+    <string name="rejected_offer">لا يرغب بالعمل</string>
+    <string name="accepted_offer">يرغب بالعمل</string>
+    <string name="distance_from_order">يبعد مسافة</string>
+    <string name="notes">الملاحظات</string>
+    <string name="no_note_added">لا توجد ملاحظة تمت اضافتها</string>
+    <string name="control">التحكم</string>
+    <string name="view_profile">مشاهدة ملف المقدم</string>
+    <string name="total_completed_orders">طلبات منجزة</string>
+    <string name="invoices_images">صور الفواتير أو المشتريات</string>
+    <string name="no_location_specified">لا يوجد موقع محدد</string>
+    <string name="switch_camera">اقلب الكاميرا</string>
+    <string name="take_photo">التقط صورة</string>
+    <string name="video_file">ملف الفيديو</string>
+    <string name="start_recording">ابدء التسجيل</string>
+    <string name="end_recording">انهاء التسجيل</string>
+    <string name="video_should_not_be_long">ملف الفيديو طويل، لا يمكن ارساله</string>
+    <string name="camera">كاميرا</string>
+    <string name="the_gallery">المعرض</string>
+    <string name="voice">صوت</string>
+    <string name="send">ارسال المقطع الصوتي</string>
+    <string name="click_to_listen">استمع للمقطع</string>
+    <string name="no_camera_file_permission">لا يوجد صلاحيات وصول للملفات او الكاميرا</string>
+    <string name="allow_permission">السماح بالصلاحية</string>
+    <string name="files">الملفات</string>
+    <string name="choose">اختر</string>
+    <string name="video">فيديو</string>
+    <string name="no_audio_permission">لا يوجد صلاحيات وصول للمايك</string>
+    <string name="add_voice_order">اضف الرسالة الصوتية</string>
+    <string name="press_for_recording">اضغط للتسجيل</string>
+    <string name="items">الأصناف</string>
+    <string name="specialty">المهنة</string>
+    <string name="details">التفاصيل</string>
+    <string name="date">التاريخ</string>
+    <string name="time">الوقت</string>
+    <string name="transportation_amount_label">المواصلات</string>
+    <string name="create_order">أنشىء الطلب</string>
+    <string name="open_order">تفاصيل الطلب</string>
+    <string name="open_home">الرئيسية</string>
+    <string name="please_wait_for_offers">يرجى الانتظار لفترة لحين قبول طلبك وموافقة مقدمي الخدمات عليه</string>
+    <string name="order_created_successfully">تم انشاء الطلب بنجاح</string>
+    <string name="see_all_prices">شاهد أسعار المواصلات</string>
+    <string name="nationality">الجنسية</string>
+    <string name="city">المدينة</string>
+    <string name="about_provider">عن المقدم</string>
+    <string name="about_center">عن المركز</string>
+    <string name="about_shop">عن المتجر</string>
+    <string name="center_location_description">وصف المكان وأقرب معلم بارز</string>
+    <string name="center_information">وصف المركز وماذا يقدم</string>
+    <string name="delivery_price_near">سعر التوصيل للمناطق القريبة</string>
+    <string name="delivery_price_far">سعر التوصيل للمناطق البعيدة</string>
+    <string name="center_name">اسم المركز</string>
+    <string name="working_days">أيام العمل</string>
+    <string name="from_hour">من الساعة</string>
+    <string name="to_hour">الى الساعة</string>
+    <string name="center_location">المركز على الخريطة</string>
+    <string name="have_delivery">هل يوجد توصيل؟</string>
+    <string name="shop_name">اسم المتجر</string>
+    <string name="shop_description">وصف المتجر وماذا يقدم</string>
+    <string name="shop_location_description">وصف الموقع وأقرب معلم بارز</string>
+    <string name="shop_location">موقع المتجر</string>
+    <string name="cancel_reason">سبب الالغاء</string>
+    <string name="closed_by">اغلقت بواسطة</string>
+    <string name="closed_reason">سبب الاغلاق</string>
+    <string name="closed_reason_description">تفاصيل اخرى</string>
+    <string name="invoice_appear_later">ستظهر تفاصيل الفاتورة وكامل التفاصيل حين قبولك لتنفيذ الطلب</string>
+    <string name="outside_total">خارج الإجمالي</string>
+    <string name="later">لاحقاً</string>
+    <string name="new_update">تحديث جديد</string>
+    <string name="new_update_message">يجب عليك تحميل اخر نسخة من التطبيق فهذا تحديث عاجل يتضمن اصلاح مشاكل، أو اضافة ميزات جديدة مهمة</string>
+    <string name="update">تحديث</string>
+    <string name="total_balance">اجمالي الرصيد</string>
+    <string name="that_given">التي تم اضافته بواسطة مكسب</string>
+    <string name="account_transactions">العمليات المالية</string>
+    <string name="action_by">بواسطة</string>
+    <string name="be_one_of_our_customer">كن جزءاً من 70+ الف عميل يستخدم مكسب 💙</string>
+    <string name="change_my_mind">غيرت رأي</string>
+    <string name="found_provider_outside">وجدت مقدم للخدمة خارج التطبيق</string>
+
+    <string name="order_offer_now">إطلب العرض الآن</string>
+    <string name="offer_end_on">ينتهي في</string>
+    <string name="want_to_delete_image">هل تريد حذف الصورة ؟</string>
+    <string name="select_city_first">الرجاء إختيار مدينة اولآ</string>
+    <string name="select_your_location">الرجاء إختيار موقعك من الخريطة</string>
+    <string name="select_category">إختر التصنيف الأساسي</string>
+    <string name="add_sub_category">اختر التصنيف الفرعي</string>
+    <string name="fill_all_data_error">الرجاء قم بإدخال كافة البيانات المطلوبة</string>
+    <string name="ticket_added">تم إضافة التذكرة بنجاح</string>
+    <string name="loading_please_wait">تحميل. الرجاء الانتظار</string>
+    <string name="service_not_coverd">الحي الذي تطلب منه غير مغطى في هذه الخدمة , نسعى لتغطية الحي قريبآ</string>
+    <string name="sorry">عذراً</string>
+    <string name="pik_service">إختر الخدمة</string>
+    <string name="select_location_from_map">أختر موقع من الخريطة</string>
+    <string name="qouestions">الإستفسارات</string>
+    <string name="you_username">أنت</string>
+    <string name="try_again">حاول مرة اخرى</string>
+    <string name="share_maksab">مشاركة مكسب</string>
+    <string name="share_with">مشاركة عن طريق</string>
+    <string name="contact_data">بيانات التواصل</string>
+    <string name="copied_to_cliport">تم النسخ الى الحافظة</string>
+    <string name="credit_description">عند وصولك لعدد معين من النقاط تستطيع استبدالها بمبالغ أو هدايا عينية، اضغط هنا لمعرفة التفاصيل</string>
+    <string name="click_for_more_details">اضغط هنا لمعرفة التفاصيل</string>
+    <string name="need_service_with_good_price">محتاج خدمة مضمونة وبأسعار حنينة؟</string>
+    <string name="in_housing_services">سواءً في مجال الصيانة، النظافة، البناء، التجميل، التدريس الخصوصي، المناسبات، الرعاية الصحية، خدمات الأعمال</string>
+    <string name="download_maksab">اذاً سارع بتحميل تطبيق مكسب  ، وبتلقى فيه كل الخدمات وضمان كمان</string>
+    <string name="manuall">طريقة الاستخدام</string>
+    <string name="feedback_thanks">شكراً لمشاركتنا رأيك، نعمل باستمرار بتحسين خدماتنا لخدمتك بشكل أفضل</string>
+    <string name="most_frequnt_qouation">الأسئلة الاكثر شيوعآ</string>
+    <string name="full_size">الحجم الكامل</string>
+    <string name="confirm_location">إعتماد الموقع</string>
+    <string name="location_permssion_needed">تطبيق مكسب يحتاج الصلاحية لكي يحدد موقعك على الخريطة مباشرة</string>
+    <string name="enable_gps">من فضلك قم بفتح خاصية ال GPS حتى يمكن تحديد موقعك</string>
+    <string name="select_service">حدد موقعك</string>
+    <string name="welcome_to_maksab">مرحبآ بك في تطبيق مكسب</string>
+    <string name="fill_data_before_next_step">الرجاء إكمال البيانات أولاً قبل الذهاب للتالي</string>
+    <string name="notifcations">الإشعارات</string>
+    <string name="provided_offers">العروض المقدمة</string>
+    <string name="closed">مغلق</string>
+    <string name="cancled">ملغية</string>
+    <string name="accept_offer_from_provider">قبول عرض من مقدم</string>
+    <string name="accept_provider_offer_confirmation">بقبولك عرض المقدم هذا يعني أنك قمت بمراجعة سعر المقدم وأنت موافق عليه وسيتم إبلاغ المقدم بذلك</string>
+    <string name="yes_accept_offer">نعم اقبل العرض</string>
+    <string name="you_will_receive_offers">ستبدأ في استقبال العروض بعد قليل , فقط استرح !</string>
+    <string name="order_details">تفاصيل الطلب #</string>
+    <string name="nearest_available_time">أقرب موعد متاح</string>
+    <string name="provider_mobile_number_will_show_after_accepting">رقم مقدم الخدمة سيظهر لاحقاً، استخدم المحادثة اذا كانت لديك أسئلة</string>
+    <string name="qountity">الكمية: </string>
+    <string name="maksab_app">تطبيق مكسب</string>
+    <string name="you_cannot_use_copoun_with_offers">لا يمكنك إستخدام كود التخفيض عند طلب العروض</string>
+    <string name="fill_description_first_error">يجب وضع الوصف اولآ</string>
+    <string name="select_address_first">يجب تحديد عنوان اولآ</string>
+    <string name="fill_time_error">يجب تحديد الموعد والوقت المناسب معك من خانة إختيار الوقت</string>
+    <string name="uploading_images">يتم الآن رفع الصورة ..</string>
+    <string name="complete_order_inputs">أكمل بيانات الطلب</string>
+    <string name="cancel_order_reson">ماهو سبب الغاء الطلب؟</string>
+    <string name="backward">تراجع</string>
+    <string name="fill_cancel_reson_error">الرجاء قم بإدخال سبب الغاء الطلب</string>
+    <string name="no_response_to_order">لم يتم الاستجابة للطلب</string>
+    <string name="current_order">الحالية</string>
+    <string name="finished_orders">المنتهية</string>
+    <string name="pound">\" جنيه \"</string>
+    <string name="selected_qountity">\"الكمية المختارة : \"</string>
+    <string name="prices_details">تفاصيل الأسعار</string>
+    <string name="order_wizard_final_step">الخطوة الأخيرة: مراجعة الطلب</string>
+    <string name="add_to_order">إضافة للطلب</string>
+    <string name="remove_item">حذف العنصر</string>
+    <string name="update_qountity">تحديث الكمية</string>
+    <string name="profile_image">الملف الشخصي</string>
+    <string name="profile_update">تم تحديث الملف الشخصي</string>
+    <string name="profile_update_failed">فشل تحديث الملف الشخصي</string>
+    <string name="your_full_name">إسمك كامل</string>
+    <string name="company_name">إسم الشركة</string>
+    <string name="update_profile">تعديل الملف الشخصي</string>
+    <string name="provider_services">أطلب سعر</string>
+    <string name="provider_gallery">اعمال المقدم</string>
+    <string name="provider_specail_offers">العروض الحصرية</string>
+    <string name="customers_reviews">تقييمات العملاء</string>
+    <string name="order_maksab_service_from_url">يمكنك طلب خدمات مكسب من هذا المقدم من الرابط ادناه</string>
+    <string name="share_provider_profile">مشاركة الملف الشخصي للمقدم</string>
+    <string name="select_item_first_error">لم يتم إختيار اي عناصر و الرجاء أختر اولآ</string>
+    <string name="basic_information">المعلومات الأساسية</string>
+    <string name="customer_reviews">تقيمات العملاء</string>
+    <string name="work_gallery">معرض الأعمال</string>
+    <string name="retry_again">أعد المحاولة مرة اخرى</string>
+    <string name="remove_address_confirmation">هل تريد حذف العنوان ؟</string>
+    <string name="select_copoun_first">إختر كود التخفيض</string>
+    <string name="problem_with_copoun">\"يوجد مشكلة , حالة كود التخفيض هي : \"</string>
+    <string name="select_date_time">إختيار الوقت واليوم</string>
+    <string name="select_images">إختيار صورة</string>
+    <string name="select_item">إختر العنصر</string>
+    <string name="select_city">إختر مدينة</string>
+    <string name="select_distric">إختر حي</string>
+    <string name="select_floor_number">إختر رقم الطابق</string>
+    <string name="select_address_type">إختر نوع العنوان</string>
+    <string name="select_service_text">إختر خدمة</string>
+    <string name="select_at_least_one">الرجاء قم بإختيار خيار واحد على الأقل</string>
+    <string name="select_specality">الرجاء إختيار مهنة</string>
+    <string name="can_not_add_items_from_other_service">لا يمكنك إضافة عنصر من خدمة أخرى</string>
+    <string name="select_at_least_one_service">قم بإختيار خدمة واحدة على الأقل</string>
+    <string name="select_item_from_menu">أختر عنصر من القائمة</string>
+    <string name="order_qouation">أطلب عرض السعر</string>
+    <string name="descrip_your_issue">قم بشرح مشكلتك جيدآ للمقدم حتي يقدم لك سعر مناسب لخدمتك</string>
+    <string name="yes_send_order_to_provider">نعم أرسل طلب للمقدم</string>
+    <string name="answer_the_qestion_first">الرجاء أجب عن الاسئلة اولآ</string>
+    <string name="answer_following_question">أجب عن الاسئلة التالية</string>
+    <string name="please_select_address">الرجاء إختر عنوان</string>
+    <string name="saved_address">العناوين المحفوظة</string>
+    <string name="are_you_sure_to_delete_address">هل تريد حذف العنوان ؟</string>
+    <string name="not_found">لا يوجد</string>
+    <string name="credits">النقاط</string>
+    <string name="end_on">ينتهي في :</string>
+    <string name="offer_details">تفاصيل العرض</string>
+    <string name="are_you_sure_to_order_offer">هل أنت متأكد من طلب العرض ؟</string>
+    <string name="order_offer">أطلب العرض</string>
+    <string name="support">الدعم الفني</string>
+    <string name="terms_condations">الشروط والاحكام</string>
+    <string name="term_1">السهولة: نحن في مكسب نوفر عليك عناء البحث عن فني او مقدم خدمة، ونقدم لك العديد من مقدمين الخدمات في مختلف احتياجاتك اليومية</string>
+    <string name="term_2">الموثوقية: فكل المقدمين لدينا مسجلين بأوراقهم وتتوفر كافة معلوماتهم لدى مكسب</string>
+    <string name="term_3">الضمان: حيث نقوم بإصلاح اي مشاكل تحدث خلال 15 يوم من انتهاء الخدمة في حال تكررت المشكلة مجدداً</string>
+    <string name="term_4">خطوات الطلب في مكسب بسيطة، كل ما عليك هو اختيار الخدمة التي تريدها، وبعدها سوف تفتح نافذة ادخال تفاصيل المشكلة، ويفضل وضع تفاصيل شاملة للمشكلة + صور إذا تطلب الأمر، بالإضافة الى تحديد الوقت المناسب لك لتنفيذ الخدمة، وبعدها تستطيع ارسال طلبك، لأقرب 20 مقدم خدمة بجانبك، وكل منهم سوف يرسل سعره المناسب لتنفيذ الطلب، او قد يطلب الفني معاينة بسعر ثابت وهو 300 جنيه.</string>
+    <string name="term_5">بعض الخدمات في مكسب تم تسعيرها وبالتالي سوف تعرف السعر النهائي مباشرة قبل ارسال الطلب، وأول مقدم خدمة يقبل الطلب سوف يقوم بتنفيذه مباشرة.</string>
+    <string name="term_6">الطلب سوف يمر اولاً بمرحلة المراجعة بواسطة فريق الدعم الفني، للتأكد من وضوح الطلب، وقد يتم الاتصال بك للتأكد من تفاصيل الطلب او لطلب اي معلومات اضافية، لذلك احرص على الرد على مكالمات قسم الدعم الفني للإجابة عن أي تساؤلات بخصوص الطلب.</string>
+    <string name="term_7">بعد قبول الطلب، وعادة يتم قبول الطلبات بسرعة خلال فترة الدوام الرسمي، يتم ارساله الى أقرب 20 مقدم خدمة، وكل منهم سوف يضع سعره وملاحظته بالإضافة الى تحديد نوع التنفيذ هل تنفيذ مباشرة او هو معاينة فقط.</string>
+    <string name="term_8">قد يقوم بعض المقدمين بإرسال بعض الاستفسارات لك، سوف تجدها في خانة الاستفسارات في تفاصيل الطلب، وسيتم ارسال تنبيه لك عند كل استفسار جديد، لذلك احرص على الاجابة على الاستفسارات حتى تكون المشكلة واضحة لمقدمي الخدمة.</string>
+    <string name="term_9">الأسعار قد لا تأتيك مباشرة من مقدمي الخدمة، لذلك انتظر فترة كافية لكل تحصل على أكثر من عرض سعر، وفريق الدعم الفني يعمل مباشرة على الطلب لكي يقوم مقدمي الخدمة بإضافة التسعيرات.</string>
+    <string name="term_10">لا تقوم بعمل اي طلبات خارج التطبيق، فسوف تفقد ميزة الضمان + متابعة الطلبات والتأكد من جودتها وتنفيذها بشكل سليم. ومكسب غير مسؤولة تماماً عن أي طلب أو اتفاق يتم خارج التطبيق.</string>
+    <string name="term_11">في حال طلب مقدم الخدمة المعاينة، فاحرص على معرفة السعر المطلوب بعد انتهاء المعاينة وقبل المباشرة بالعمل، ولك الحق التام في انهاء الطلب في هذه اللحظة إذا لم تريد تنفيذ الطلب، ودفع قيمة المعاينة 300 جنيه.</string>
+    <string name="term_12">فريق الدعم الفني قد يقوم بالاتصال بك خلال فترة تنفيذ الطلب او بعد التنفيذ للتأكد من سلامة التنفيذ، لذلك احرص على الاجابة بكامل المعلومات لتحسين جودة الخدمة بشكل أفضل.</string>
+    <string name="term_13">لا تنسى تقييم مقدم الخدمة بعد الانتهاء من العمل، حيث يتم الاستغناء عن المقدمين بتقييم اقل من المتوسط</string>
+    <string name="term_14">إذا لم يتم تنفيذ العمل بطريقة مرضية، فيمكنك التواصل مع قسم الدعم الفني لحل المشكلة، او كتابة التفاصيل لحظة التقييم وسيتم تحوليها للقسم المختص بذلك.</string>
+    <string name="term_15">في حال وجود اي تقصير من مقدم الخدمة، قبل او اثناء تنفيذ الخدمة، فالرجاء التواصل معنا عبر الدعم الفني لمساعدتكم. ويهمنا رضاكم التام، ويسعدنا سماع آرائكم ومقترحاتكم وبإذن الله نعمل على تلبية احتياجاتكم ونطور خدماتنا بشكل مستمر</string>
+    <string name="term_16">لا تنسى مشاركة التطبيق لمعارفك، من خلال زر احصل على مكافئة وسوف تحصل على نقاط يتم تحويلها الى رصيد وتستفيد منها في الطلبات القادمة.</string>
+    <string name="term_title_1">لماذا تطلب عبر مكسب</string>
+    <string name="term_title_2">كيف تطلب من مكسب</string>
+    <string name="term_title_3">ماذا بعد أن قمت بعمل الطلب</string>
+    <string name="term_title_4">نصائح مهمة</string>
+    <string name="term_title_5">بعد الانتهاء من الطلب</string>
+    <string name="term_title_6">مكسب في خدمتكم دائماً</string>
+    <string name="tickets">التذاكر</string>
+    <string name="ticket_number">تذكرة رقم #</string>
+    <string name="closed_verb">مغلقة</string>
+    <string name="opend_verb">مفتوحة</string>
+    <string name="transportation_price">أسعار المواصلات</string>
+    <string name="we_are_glad_to_serve_you">يشرفنا خدمتك، في أكبر تطبيق خدمات في السودان</string>
+    <string name="daily_from5to9">يومياً، من الساعة 8 صباحاً إلى 5 مساءً ما عدا الجمعة</string>
+    <string name="need_help">محتاج أي مساعدة؟</string>
+    <string name="any_questions">اذا كانت لديك أي أسئلة أو استفسارات أو مقترحات أو شكاوي، كل ما عليك هو أن تقوم بعمل تذكرة وتوضيح المشكلة وسوف نقوم بالتواصل معك في اقرب فرصة</string>
+    <string name="location_description">الخرطوم، اركويت تقاطع السلام مع الشرقي</string>
+    <string name="follow_us">تابعنا على صفحاتنا في مواقع الاجتماعي لتحصل على كل جديد بخصوص تطبيق مكسب</string>
+    <string name="share_now">شارك التطبيق الآن</string>
+    <string name="share_maksab_app_credis">شارك رابطك الخاص في تطبيق مكسب لأصدقائك وجيرانك وكل معارفك</string>
+    <string name="you_will_get_points_when_share">ستحصل على نقطة مقابل كل عميل يسجل في التطبيق من خلالك</string>
+    <string name="redeem_your_points">عند وصولك لعدد معين من النقاط تستطيع استبدالها بمبالغ أو هدايا عينية، اضغط هنا لمعرفة التفاصيل</string>
+    <string name="qouation">عرض سعر</string>
+    <string name="content_here">محتوى الموضوع سوف يكون هنا</string>
+    <string name="did_you_get_benfit">هل استفدت من الاجابة؟</string>
+    <string name="how_can_help_you">كيف ممكن نساعدك؟</string>
+    <string name="please_update">يجب عليك تحميل اخر نسخة من التطبيق فهذا تحديث عاجل يتضمن اصلاح مشاكل , او اضافة ميزات جديدة مهمة</string>
+    <string name="later_on">لاحقآ</string>
+    <string name="order_service">اطلب الخدمة</string>
+    <string name="offers_list">العروض</string>
+    <string name="order_detials">التفاصيل</string>
+    <string name="invoice">الفاتورة</string>
+    <string name="order_managment">إدارة الطلب</string>
+    <string name="finish">إغلاق</string>
+    <string name="select_appropriate_day">إختر اليوم المناسب معك</string>
+    <string name="select_appropriate_time">إختر الوقت المناسب معك</string>
+    <string name="accept_flexable_time">أقبل مواعيد أخرى اذا لم يتوفر الموعد المحدد</string>
+    <string name="select_time_date">إختيار الوقت المحدد</string>
+    <string name="click_to_select_image">الرجاء قم بالضغط ادنها لإختيار صورة</string>
+    <string name="save_image">حفظ الصورة</string>
+    <string name="do_you_have_any_question">هل لديك اي استفسار، شكوى، فكرة، اقتراح قم بمراسلتنا ادناه</string>
+    <string name="address">العنوان</string>
+    <string name="feedback_body">الموضوع ..</string>
+    <string name="send_now">راسلنا الآن</string>
+    <string name="call_us_from_option">للتواصل معنا عبر أرقام الدعم الفني في الأقسام التالية، يومياً من الساعة 8 صباحاً وحتى 9 مساءاً:</string>
+    <string name="maintenance">الصيانة</string>
+    <string name="cleaning">النظافة</string>
+    <string name="beautiful">التجميل</string>
+    <string name="read_terms">قم بقرائة آلية عمل التطبيق والشروط والأحكام</string>
+    <string name="try_app">تجربة التطبيق</string>
+    <string name="no_response">لم يتم الاستجابة للطلب</string>
+    <string name="other_reson">سبب اخر</string>
+    <string name="please_type_reson">اكتب السبب هنا</string>
+    <string name="your_account_blocked">تم حظرك حسابك الرجاء قم بمتابعة الدعم الفني</string>
+    <string name="call_supper">راسل الدعم الفني</string>
+    <string name="select_appropriate_service">إختر الخدمة المناسبة</string>
+    <string name="show_all">عرض الكل</string>
+    <string name="maksab_services">خدمات مكسب</string>
+    <string name="maksab_offers">عروض مكسب</string>
+    <string name="most_request_service">أكثر الخدمات طلبآ</string>
+    <string name="identify_service">تحديد الخدمة</string>
+    <string name="region">المنطقة</string>
+    <string name="your_address">حدد موقع السكن</string>
+    <string name="order_info">معلومات الطلب</string>
+    <string name="service_type">نوع الخدمة</string>
+    <string name="order_type_text">نوع الطلب</string>
+    <string name="maksab_priced_service">خدمة مسعرة مكسب</string>
+    <string name="status">الحالة</string>
+    <string name="reson">السبب</string>
+    <string name="order_description">وصف الطلب</string>
+    <string name="no_selected_items">لا توجد أصناف تم اختيارها</string>
+    <string name="addtional_data">بيانات اضافية</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="excuation_type">طريقة التنفيذ</string>
+    <string name="innternal_order_status">حالة الطلب الداخلية</string>
+    <string name="last_update">تاريخ أخر تحديث</string>
+    <string name="internal_status_last_update">تاريخ تحديث الحالة الداخلية</string>
+    <string name="schudling">الجدولة (الموعد للزيارة التالية)</string>
+    <string name="order_timing">أوقات الطلب</string>
+    <string name="order_date">لتاريخ :</string>
+    <string name="order_excuation_date">تاريخ تنفيذ الطلب</string>
+    <string name="excation_from_time">وقت التنفيذ من الساعة</string>
+    <string name="customer_accept_flex_time">هل يقبل العميل أي أوقات اخرى مقترحة؟</string>
+    <string name="no_images_on_order">لا توجد صور مرفقة في هذا الطلب</string>
+    <string name="write_description">قم بكتابة التفاصيل لمقدم الخدمة حتى يستطيع فهم المشكلة</string>
+    <string name="order_body_details">قم بكتابة وصف للخدمة المطلوبة والتفاصيل التي ترغب بها</string>
+    <string name="add_order_images">قم بإضافة صور (إن اردت)، حاول ان تجعلها واضحة بقدر الإمكان</string>
+    <string name="date_of_order_excution">تاريخ تنفيذ الطلب</string>
+    <string name="timing_from_hour">وقت التنفيذ من الساعة</string>
+    <string name="accept_flex_timing">هل يقبل العميل أي أوقات اخرى مقترحة؟</string>
+    <string name="order_location">مكان الطلب</string>
+    <string name="birthdate">تاريخ ميلادك</string>
+    <string name="account_type">نوع الحساب</string>
+    <string name="indvidual">فرد</string>
+    <string name="company">شركة</string>
+    <string name="social_media">مواقع التواصل الإجتماعي</string>
+    <string name="app_store">عن طريق متجر التطبيقات</string>
+    <string name="ads">عن طريق إعلان وجدته</string>
+    <string name="friend_telling">أخبرني به صديق</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="address_locations">العناوين والمواقع</string>
+    <string name="fav_providers">المقدمين المفضلين</string>
+    <string name="balance">الرصيد</string>
+    <string name="how_app_works">الأسئلة الأكثر شيوعاً</string>
+    <string name="contact_us">تواصل معنا</string>
+    <string name="credis">النقاط</string>
+    <string name="share_and_earn">شارك التطبيق واكسب مع مكسب</string>
+    <string name="rating_app">قيم التطبيق على متجر بلاي</string>
+    <string name="terms_and_condations">شروط الإستخدام</string>
+    <string name="logout">تسجيل خروج</string>
+    <string name="cleaning_house">تنظيف منازل</string>
+    <string name="we_hope_you_good_experiance">نعدكم .. بتقديم تجربة مميزة وفريدة</string>
+    <string name="made_with_love">صنع بحب 💙 في السودان 🇸🇩</string>
+    <string name="why_maksab">لماذا تطلب عبر مكسب؟</string>
+    <string name="warranty">ضمان وأمان</string>
+    <string name="warranty_description">ضمان يشمل أغلب الخدمات لإعادة تنفيذ الخدمة عند تكرار المشكلة مجاناً</string>
+    <string name="trustness">الموثوقية</string>
+    <string name="trustness_description">مقدمين محترفين مؤهلين تم اختيارهم وتسجيلهم بعناية</string>
+    <string name="easyness">السهولة</string>
+    <string name="easyness_description">بضغطة زر واحدة تستطيع طلب مقدمي الخدمات بأسعار في المتناول</string>
+    <string name="rate_maksab_on_play">قيم مكسب</string>
+    <string name="rate_maksab_on_play_description">مكسب عايز تقييمك للتطبيق بشكل عام , ما حناخد من وقتك اكثر من دقيقتين , اضغط زر قيمنا الآن وقم بتقييم التطبيق في متجر بلي</string>
+    <string name="rate_maksab_thanking">والف شكر على دعمك</string>
+    <string name="rate_now">قيمنا الآن</string>
+    <string name="select_copoun">إختيار</string>
+    <string name="providers_services">Providers Services</string>
+    <string name="cancel_order_details">إلغاء الطلب (علمآ ان الطلبات تاخذ الي 20 دقيقة لإيجاد مقدم خدمة مناسب لك)</string>
+    <string name="before_cancel_notes">قبل إلغاء الطلب تذكر أن بعض الطلبات قد تأخذ قرابة 20 دقيقة لإيجاد مقدم أو الموافقة عليها</string>
+    <string name="before_cancel_2">إلغاء الطلب يعني عدم رغبتك في الإستمرار بالطلب نهائياً</string>
+    <string name="on_date">في</string>
+    <string name="on_time">الساعة</string>
+    <string name="provider_not_answered">المقدم لم يرد علي</string>
+    <string name="provider_high_priced">المقدم سعره مرتفع</string>
+    <string name="changed_my_mind">غيرت رأي</string>
+    <string name="dont_like_gallery">لم تعجبني أعماله</string>
+    <string name="why_need_change_provider">لماذا تريد تغير مقدم الخدمة ؟</string>
+    <string name="attachments_can_added_later">أضف التذكرة أولاً وبعدها بامكانك اضافة اي مرفقات أو صور اضافية</string>
+    <string name="select_time_for_home_service">الرجاء إختيار تاريخ ووقت وصول المقدم</string>
+    <string name="select_time_for_home_booking">الأوقات المتاحة للحجز وتنفيذ الخدمة</string>
+    <string name="shop_info_ttle">معلومات المتجر / المركز</string>
+</resources>
