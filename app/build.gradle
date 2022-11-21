@@ -65,7 +65,7 @@ android {
             dimension "version"
             resValue "string", "app_flavor_type", "production"
             buildConfigField 'String', 'ApiBaseUrl', '"https://api.maksab.sd/api/v1/"';
-            buildConfigField 'String', 'IdentityBaseUrl', '"https://identity.maksab.sd/api/v1/"';
+            buildConfigField 'String', 'IdentityBaseUrl', '"https://identity.maksab-app.com/api/v1/"';
             buildConfigField 'String', 'ChatBaseUrl', '"https://chat.maksab.sd/chathub"';
             buildConfigField 'String', 'TopicName', '"customers"';
             buildConfigField 'boolean', 'testMode', 'false';
