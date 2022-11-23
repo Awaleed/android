@@ -60,71 +60,68 @@ public class CardBasedSectionsFragment extends Fragment {
     public static CardBasedSectionsFragment newInstance(ArrayList<CardBasedCategoriesModel> cardBasedCategoriesModels, String title) {
         CardBasedSectionsFragment fragment = new CardBasedSectionsFragment();
         Bundle args = new Bundle();
-        args.putString("title" , title);
-        args.putParcelableArrayList("items" , cardBasedCategoriesModels);
+        args.putString("title", title);
+        args.putParcelableArrayList("items", cardBasedCategoriesModels);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_card_based_categories, container, false);
-       initView(view);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_card_based_categories, container, false);
+        initView(view);
         return view;
     }
 
-    private void initView(View view){
+    private void initView(View view) {
         _cateCardBasedCategoriesModels = new ArrayList<>();
-        ButterKnife.bind(this , view);
+        ButterKnife.bind(this, view);
         setupRecyclerView();
 
         if (_cateCardBasedCategoriesModels == null ||
-             _cateCardBasedCategoriesModels.isEmpty()) {
+                _cateCardBasedCategoriesModels.isEmpty()) {
             title_layout.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             title_layout.setVisibility(View.VISIBLE);
         }
 
         String titleString = getArguments().getString("title");
-        if(!StringUtils.isEmpty(titleString)){
+        if (!StringUtils.isEmpty(titleString)) {
             title.setText(titleString);
         }
     }
 
-    private void setupRecyclerView(){
+    private void setupRecyclerView() {
         recyclerview.setNestedScrollingEnabled(true);
         _cateCardBasedCategoriesModels = getArguments().getParcelableArrayList("items");
-        _basdCardBasedSectionsAdapter = new CardBasedSectionsAdapter(_cateCardBasedCategoriesModels , view -> {
+        _basdCardBasedSectionsAdapter = new CardBasedSectionsAdapter(_cateCardBasedCategoriesModels, view -> {
             CardBasedCategoriesModel specialityModel = _cateCardBasedCategoriesModels.get(recyclerview.getChildAdapterPosition(view));
-            if(!specialityModel.isCoverage()){
-                MessageDialog.showMessageDialog((BaseActivity) getActivity(), getString(R.string.sorry) , getString(R.string.service_not_coverd));
+            if (!specialityModel.isCoverage()) {
+                MessageDialog.showMessageDialog((BaseActivity) getActivity(), getString(R.string.sorry), getString(R.string.service_not_coverd));
                 subscribeToSpeciality(specialityModel);
                 return;
             }
             OrderInMemoryStorage.SpecialtyType = specialityModel.getSpecialtyType();
 
-            if (specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.ProvidersList.ordinal()){
-                Intent intent = new Intent(getActivity() , ProviderListActivity.class);
+            if (specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.ProvidersList.ordinal()) {
+                Intent intent = new Intent(getActivity(), ProviderListActivity.class);
                 intent.putExtra("selected.speciality", specialityModel.getId());
                 intent.putExtra("selected.speciality.title", specialityModel.getLabel());
                 getActivity().startActivity(intent);
-            }
-            else if(specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.ProviderServicesList.ordinal()){
-                Intent intent = new Intent(getActivity() , ServicesActivity.class);
+            } else if (specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.ProviderServicesList.ordinal()) {
+                Intent intent = new Intent(getActivity(), ServicesActivity.class);
                 intent.putExtra("speciality.id", specialityModel.getId());
                 getActivity().startActivity(intent);
-            }
-            else if(specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.QuotationWizard.ordinal() ||
-                    specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.MaksabServicesWizard.ordinal()){
-                Intent intent = new Intent(getActivity() , NewOrderWizardActivity.class);
-                intent.putExtra("speciality.id" , specialityModel.getId());
-                intent.putExtra("speciality.transportation_price" , specialityModel.getTransportationPrice());
+            } else if (specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.QuotationWizard.ordinal() ||
+                    specialityModel.getSpecialtySelectionTypeId() == Enums.SpecialtyUISelectionEnum.MaksabServicesWizard.ordinal()) {
+                Intent intent = new Intent(getActivity(), NewOrderWizardActivity.class);
+                intent.putExtra("speciality.id", specialityModel.getId());
+                intent.putExtra("speciality.transportation_price", specialityModel.getTransportationPrice());
                 getActivity().startActivity(intent);
             }
         });
 
-        layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL , false);
+        layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
         recyclerview.setLayoutManager(layoutManager);
         recyclerview.setAdapter(_basdCardBasedSectionsAdapter);
@@ -154,7 +151,7 @@ public class CardBasedSectionsFragment extends Fragment {
         private View.OnClickListener _onClickListener;
         private List<CardBasedCategoriesModel> _cardBasedCategoriesModels;
 
-        CardBasedSectionsAdapter(List<CardBasedCategoriesModel> cardBasedCategoriesModels , View.OnClickListener onClickListener){
+        CardBasedSectionsAdapter(List<CardBasedCategoriesModel> cardBasedCategoriesModels, View.OnClickListener onClickListener) {
             _onClickListener = onClickListener;
             _cardBasedCategoriesModels = cardBasedCategoriesModels;
         }
@@ -164,7 +161,7 @@ public class CardBasedSectionsFragment extends Fragment {
         public CardBasedCategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             CardBasedCategoriesViewHolder cardBasedCategoriesViewHolder =
                     new CardBasedCategoriesViewHolder(LayoutInflater.from(parent.getContext())
-                            .inflate(R.layout.item_card_based_categories, parent , false));
+                            .inflate(R.layout.item_card_based_categories, parent, false));
             cardBasedCategoriesViewHolder.itemView.setOnClickListener(_onClickListener);
             return cardBasedCategoriesViewHolder;
         }
@@ -193,7 +190,7 @@ public class CardBasedSectionsFragment extends Fragment {
         }
     }
 
-    class CardBasedCategoriesViewHolder extends RecyclerView.ViewHolder{
+    class CardBasedCategoriesViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.label)
         TextView label;
@@ -202,7 +199,7 @@ public class CardBasedSectionsFragment extends Fragment {
 
         public CardBasedCategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this , itemView);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

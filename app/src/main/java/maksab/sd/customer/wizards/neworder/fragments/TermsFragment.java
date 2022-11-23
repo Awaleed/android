@@ -3,6 +3,7 @@ package maksab.sd.customer.wizards.neworder.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,22 +23,23 @@ public class TermsFragment extends Fragment implements FragmentsContract {
     public static TermsFragment newInstance(String htmlTerms) {
         TermsFragment fragment = new TermsFragment();
         Bundle args = new Bundle();
-        args.putString("htmlTerms" , htmlTerms);
+        args.putString("htmlTerms", htmlTerms);
 
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_terms, container, false);
         initViews(view);
         return view;
     }
 
-    private void initViews(View view){
-        ButterKnife.bind(this , view);
+    private void initViews(View view) {
+        ButterKnife.bind(this, view);
         terms_textview.setText(Html.fromHtml(getArguments().getString("htmlTerms")));
+        Log.d("terms_textview.getText", terms_textview.getText().toString());
     }
 
     @Override

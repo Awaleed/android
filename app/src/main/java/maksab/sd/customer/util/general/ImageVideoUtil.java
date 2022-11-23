@@ -11,6 +11,7 @@ import android.webkit.MimeTypeMap;
 import androidx.core.content.FileProvider;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
@@ -40,7 +41,11 @@ public class ImageVideoUtil {
         long duration = Long.parseLong(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
         int width = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
         int height = Integer.valueOf(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
-        retriever.release();
+        try {
+            retriever.release();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return duration;
     }
 

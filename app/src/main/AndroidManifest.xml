@@ -36,8 +36,8 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="${appLabel}"
-        android:requestLegacyExternalStorage="true"
         android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -116,6 +116,7 @@
 
         <activity
             android:name=".ui.general.activities.SplashActivity"
+            android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -160,8 +161,9 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
         <activity android:name=".ui.orders.activities.OrderDetailsActivity" />
-        <activity android:name=".ui.tickets.activities.TicketDetailsActivity"
-            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.tickets.activities.TicketDetailsActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.main.activties.MainActivity" />
         <activity android:name=".ui.providers.activties.ProviderListActivity" />
         <activity android:name=".ui.providers.activties.ProviderDetailsActivity" />
@@ -179,18 +181,24 @@
             android:name=".ui.profile.activities.ProfileActivity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
-        <receiver android:name=".ui.profile.broadcasts.SmsReceiver">
+        <receiver
+            android:name=".ui.profile.broadcasts.SmsReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".notifications.helpers.MyFirebaseMessagingService">
+        <service
+            android:name=".notifications.helpers.MyFirebaseMessagingService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".notifications.helpers.FirebaseIDService">
+        <service
+            android:name=".notifications.helpers.FirebaseIDService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -221,8 +229,8 @@
             android:name=".ui.providers.activties.GalleryItemDetalisActivityOld"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".ui.main.activties.SelectSpecialtyActivity" />
-        <activity android:name=".ui.providers.activties.GalleryItemDetailsActivity" />
-        <activity android:name=".ui.main.activties.ItemsListActivity" />
+        <!--        <activity android:name=".ui.providers.activties.GalleryItemDetailsActivity" />-->
+        <!--        <activity android:name=".ui.main.activties.ItemsListActivity" />-->
         <activity android:name=".ui.main.activties.BalanceActivity" />
     </application>
 

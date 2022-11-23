@@ -78,8 +78,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginTop="2dp"
-                    app:tint="@color/colorAccent"
-                    app:srcCompat="@drawable/ic_green_star" />
+                    app:srcCompat="@drawable/ic_green_star"
+                    app:tint="@color/colorAccent" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
