@@ -38,7 +38,11 @@ class CategoriesFragment : Fragment() {
     private var blocked_ui: ViewGroup? = null
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         var view = inflater.inflate(R.layout.fragment_categories, container, false)
         mainActivityViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
@@ -48,19 +52,19 @@ class CategoriesFragment : Fragment() {
         mainActivityViewModel?.getCategories()
         initViews(view)
         checkUserStatus()
-        return  view;
+        return view;
     }
 
-    private fun initViews(view:View){
+    private fun initViews(view: View) {
         var sendtosupport = view.findViewById<Button>(R.id.send_support)
-         blocked_ui = view.findViewById(R.id.blocked_ui)
+        blocked_ui = view.findViewById(R.id.blocked_ui)
         sendtosupport.setOnClickListener {
-            WhatsappUtil().openWhatsApp("0113555535" , context)
+            WhatsappUtil().openWhatsApp("0113555535", context)
         }
     }
 
     private fun categoriesObserver() {
-        mainActivityViewModel?.categoriesObservable()?.observe(this, Observer {
+        mainActivityViewModel?.categoriesObservable()?.observe(viewLifecycleOwner, Observer {
             if (it != null) {
                 dismissWaitDialog()
                 categoriesModels?.addAll(it)
@@ -72,25 +76,28 @@ class CategoriesFragment : Fragment() {
         })
     }
 
-    private fun dismissWaitDialog(){
+    private fun dismissWaitDialog() {
         if (dialog != null) {
             dialog?.dismiss()
         }
     }
 
-    private fun showWaitDialog(){
-        dialog = ProgressDialog.show(activity, "",
-                getString(R.string.loading_please_wait), true)
+    private fun showWaitDialog() {
+        dialog = ProgressDialog.show(
+            activity, "",
+            getString(R.string.loading_please_wait), true
+        )
     }
 
     private fun noInternetAvailable() {
         val builder = AlertDialog.Builder(activity!!)
         builder.setMessage(R.string.NoInternet)
-                .setCancelable(false).setNegativeButton(R.string.no_close) { dialogInterface, i -> activity?.finish() }
-                .setPositiveButton(R.string.iconnect_theInternet) { dialog, id ->
-                    showWaitDialog()
-                    mainActivityViewModel?.getCategories()
-                }.setIcon(R.drawable.logo_gray)
+            .setCancelable(false)
+            .setNegativeButton(R.string.no_close) { dialogInterface, i -> activity?.finish() }
+            .setPositiveButton(R.string.iconnect_theInternet) { dialog, id ->
+                showWaitDialog()
+                mainActivityViewModel?.getCategories()
+            }.setIcon(R.drawable.logo_gray)
         val alert = builder.create()
         alert.show()
     }
@@ -100,23 +107,28 @@ class CategoriesFragment : Fragment() {
         category_recyclerview?.setHasFixedSize(true)
         var layoutmanger = LinearLayoutManager(activity)
         categoriesModels = ArrayList()
-        categoriesAdapter = CategoriesAdapter(categoriesModels!! , View.OnClickListener {
-            openProviderListScreen(it)
-        }, activity!!)
+        categoriesAdapter = CategoriesAdapter(
+            categoriesModels!!,
+            View.OnClickListener {
+                openProviderListScreen(it)
+            },
+            requireActivity(),
+        )
         category_recyclerview?.layoutManager = layoutmanger
         category_recyclerview?.adapter = categoriesAdapter
     }
 
     private fun openProviderListScreen(view: View) {
-        var catid =  categoriesModels?.get(category_recyclerview?.getChildAdapterPosition(view)!!)?.id
-         if(catid  ==1){
-             var  intent  =  Intent(activity , SectionsHomeLayoutActivity::class.java)
-             startActivity(intent);
-         }else{
-             var  intent  =  Intent(activity , SelectSpecialtyActivity::class.java)
-             intent.putExtra("catid", catid);
-             startActivity(intent);
-         }
+        var catid =
+            categoriesModels?.get(category_recyclerview?.getChildAdapterPosition(view)!!)?.id
+        if (catid == 1) {
+            var intent = Intent(activity, SectionsHomeLayoutActivity::class.java)
+            startActivity(intent);
+        } else {
+            var intent = Intent(activity, SelectSpecialtyActivity::class.java)
+            intent.putExtra("catid", catid);
+            startActivity(intent);
+        }
     }
 
 
@@ -126,19 +138,25 @@ class CategoriesFragment : Fragment() {
     }
 
     private fun isAppHasPermission(): Boolean {
-        return  return ContextCompat.checkSelfPermission(activity!!, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(activity!!, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        return return ContextCompat.checkSelfPermission(
+            activity!!,
+            Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun turnOnLoaction() {
-        val builder = AlertDialog.Builder(activity!!)
+        val builder = AlertDialog.Builder(requireActivity())
         builder.setMessage(R.string.enableGps)
-                .setCancelable(false)
-                .setPositiveButton(R.string.ok) { dialog, id ->
-                    val viewIntent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-                    startActivity(viewIntent)
+            .setCancelable(false)
+            .setPositiveButton(R.string.ok) { dialog, id ->
+                val viewIntent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                startActivity(viewIntent)
 
-                }
+            }
         val alert = builder.create()
         alert.show()
     }
@@ -147,18 +165,18 @@ class CategoriesFragment : Fragment() {
 
         @JvmStatic
         fun newInstance() =
-                CategoriesFragment().apply {
-                    arguments = Bundle().apply {
+            CategoriesFragment().apply {
+                arguments = Bundle().apply {
 
-                    }
                 }
+            }
     }
 
-    private fun checkUserStatus(){
-        if(false){
-        blocked_ui?.visibility = View.VISIBLE
+    private fun checkUserStatus() {
+        if (false) {
+            blocked_ui?.visibility = View.VISIBLE
             category_recyclerview?.visibility = View.GONE
-        }else {
+        } else {
             blocked_ui?.visibility = View.GONE
             category_recyclerview?.visibility = View.VISIBLE
         }

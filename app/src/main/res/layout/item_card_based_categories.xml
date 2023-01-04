@@ -26,10 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:textStyle="bold"
         android:layout_marginTop="2dp"
+        android:gravity="center"
         android:textColor="@color/body_gray"
-        tools:text="اسم الخدمة"
-        />
+        android:textStyle="bold"
+        tools:text="اسم الخدمة" />
 </LinearLayout>

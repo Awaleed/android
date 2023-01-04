@@ -8,7 +8,7 @@ import java.util.List;
 import maksab.sd.customer.models.home.HomeCategoryModel;
 
 
-public class HomeModel{
+public class HomeModel {
 
     @SerializedName("greeting")
     @Expose
@@ -76,7 +76,6 @@ public class HomeModel{
     public void setShopsSpecialties(List<HomeSpecialtyModel> shopsSpecialties) {
         this.shopsSpecialties = shopsSpecialties;
     }
-
 
 
     public class HomeSpecialtyModel {

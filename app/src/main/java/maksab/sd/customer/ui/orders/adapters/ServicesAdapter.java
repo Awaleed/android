@@ -19,11 +19,11 @@ import maksab.sd.customer.util.constants.Enums;
 import maksab.sd.customer.util.general.NumbersUtil;
 import maksab.sd.customer.util.general.StringUtils;
 
-public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ServicesViewHolder>{
+public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ServicesViewHolder> {
     private List<ServiceModel> itemsModels;
     private View.OnClickListener clickEventHandler;
 
-    public ServicesAdapter(List<ServiceModel> itemsModels, View.OnClickListener clickEventHandler){
+    public ServicesAdapter(List<ServiceModel> itemsModels, View.OnClickListener clickEventHandler) {
         this.itemsModels = itemsModels;
         this.clickEventHandler = clickEventHandler;
     }
@@ -31,9 +31,9 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
     @Override
     public ServicesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ServicesViewHolder viewHolder = new ServicesViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_service, parent , false));
+                .inflate(R.layout.item_service, parent, false));
         viewHolder.itemView.setOnClickListener(clickEventHandler);
-        return  viewHolder;
+        return viewHolder;
     }
 
     @Override
@@ -42,10 +42,9 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
         viewHolder.name.setText(serviceModel.getName());
         viewHolder.note.setText(serviceModel.getDescription());
 
-        if(serviceModel.getQuantity() == null || serviceModel.getQuantity() == 0){
+        if (serviceModel.getQuantity() == null || serviceModel.getQuantity() == 0) {
             viewHolder.quantity.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             viewHolder.quantity.setVisibility(View.VISIBLE);
             viewHolder.quantity.setText("" + serviceModel.getQuantity());
         }
@@ -61,8 +60,7 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
                     .load(serviceModel.getImagePath())
                     .placeholder(R.drawable.logo_gray)
                     .into(viewHolder.service_image);
-        }
-        else {
+        } else {
             Picasso.with(viewHolder.service_image.getContext())
                     .load(R.drawable.logo_gray)
                     .into(viewHolder.service_image);

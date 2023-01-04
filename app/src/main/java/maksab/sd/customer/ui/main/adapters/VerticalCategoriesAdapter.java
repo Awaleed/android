@@ -29,7 +29,7 @@ public class VerticalCategoriesAdapter extends RecyclerView.Adapter<VerticalCate
     private View.OnClickListener onClickListener;
     private List<HomeCategoryModel> categoriesModels;
 
-    public VerticalCategoriesAdapter(View.OnClickListener onClickListener, List<HomeCategoryModel> categoriesModels){
+    public VerticalCategoriesAdapter(View.OnClickListener onClickListener, List<HomeCategoryModel> categoriesModels) {
         this.onClickListener = onClickListener;
         this.categoriesModels = categoriesModels;
     }
@@ -37,17 +37,14 @@ public class VerticalCategoriesAdapter extends RecyclerView.Adapter<VerticalCate
     @NonNull
     @Override
     public VerticalCategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        VerticalCategoriesViewHolder viewHolder = new VerticalCategoriesViewHolder(LayoutInflater.
-                from(parent.getContext()).inflate(R.layout.item_vertical_categories, parent , false));
+        VerticalCategoriesViewHolder viewHolder = new VerticalCategoriesViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_vertical_categories, parent, false));
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull VerticalCategoriesViewHolder holder, int position) {
         HomeCategoryModel categoriesModel = categoriesModels.get(position);
-        Picasso.with(holder.category_image.getContext())
-                .load(categoriesModel.getImagePath())
-                .into(holder.category_image);
+        Picasso.with(holder.category_image.getContext()).load(categoriesModel.getImagePath()).into(holder.category_image);
         holder.category_name.setText(categoriesModel.getArabicName());
         holder.number_of_services.setText(categoriesModel.getDescription());
 
@@ -58,8 +55,7 @@ public class VerticalCategoriesAdapter extends RecyclerView.Adapter<VerticalCate
             holder.category_name.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.white));
             holder.number_of_services.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.white));
             holder.category_image.setLayerType(LAYER_TYPE_HARDWARE, null);
-        }
-        else {
+        } else {
             holder.status_text_view.setVisibility(View.VISIBLE);
 
             ColorMatrix matrix = new ColorMatrix();
@@ -91,7 +87,7 @@ public class VerticalCategoriesAdapter extends RecyclerView.Adapter<VerticalCate
 
         public VerticalCategoriesViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this , itemView);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

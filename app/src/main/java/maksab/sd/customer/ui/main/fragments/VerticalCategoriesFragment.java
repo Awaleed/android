@@ -84,7 +84,7 @@ public class VerticalCategoriesFragment extends Fragment {
             if (index >= 0 && index < categoriesModels.size()) {
                 selectedHomeCategoryModel = categoriesModels.get(index);
                 if (selectedHomeCategoryModel.getCategoryStatus() == Enums.CategoryStatusEnum.Active.ordinal()) {
-                    SelectAddressSheet selectAddressSheet =  SelectAddressSheet.newInstance(new BottomSheetEvents() {
+                    SelectAddressSheet selectAddressSheet = SelectAddressSheet.newInstance(new BottomSheetEvents() {
                         @Override
                         public void onAddService(int position, int quantity) {
 
@@ -92,7 +92,7 @@ public class VerticalCategoriesFragment extends Fragment {
 
                         @Override
                         public void onAddService() {
-                            if(AddressInMemoryStorage.id != 0 && !StringUtils.isEmpty(AddressInMemoryStorage.body)){
+                            if (AddressInMemoryStorage.id != 0 && !StringUtils.isEmpty(AddressInMemoryStorage.body)) {
                                 openCategoryDetails();
                             }
                         }
@@ -101,8 +101,7 @@ public class VerticalCategoriesFragment extends Fragment {
                     AddressInMemoryStorage.body = "";
                     AddressInMemoryStorage.district = "";
                     selectAddressSheet.show(getChildFragmentManager(), selectAddressSheet.getTag());
-                }
-                else if (selectedHomeCategoryModel.getCategoryStatus() == Enums.CategoryStatusEnum.Soon.ordinal()) {
+                } else if (selectedHomeCategoryModel.getCategoryStatus() == Enums.CategoryStatusEnum.Soon.ordinal()) {
                     if (getActivity() != null)
                         MessageDialog.showMessageDialog((BaseActivity) getActivity(),
                                 selectedHomeCategoryModel.getArabicName(),
@@ -164,7 +163,7 @@ public class VerticalCategoriesFragment extends Fragment {
             transaction.replace(R.id.why_use_makasab_container, WhyMaksabFragment.newInstance());
             transaction.disallowAddToBackStack();
             transaction.commit();
-        }catch (Exception exception){
+        } catch (Exception exception) {
             FirebaseCrashlytics.getInstance().log(exception.getMessage());
         }
     }

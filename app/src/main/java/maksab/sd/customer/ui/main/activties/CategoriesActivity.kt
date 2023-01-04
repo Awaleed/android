@@ -13,18 +13,18 @@ class CategoriesActivity : BaseActivity() {
         //toolbar?.title = "إختر الخدمة"
 
         //setSupportActionBar(toolbar)
-        supportActionBar!!.setTitle(getString(R.string.pik_service))
+        supportActionBar!!.title = getString(R.string.pik_service)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
-        var fragmentTransaction  = supportFragmentManager.beginTransaction()
-        fragmentTransaction.add(R.id.container , CategoriesFragment.newInstance())
+        var fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.container, CategoriesFragment.newInstance())
         fragmentTransaction.commit()
     }
 
-    private fun getIntentValues(){
+    private fun getIntentValues() {
         var catid = intent.getStringExtra("catid")
-        var specialtyId = intent.getIntExtra("specialtyId" , 0)
+        var specialtyId = intent.getIntExtra("specialtyId", 0)
         var specialtyName = intent.getStringExtra("specialtyName")
         var specialtydecription = intent.getStringExtra("specialtydecription")
     }
