@@ -154,7 +154,7 @@ public class OrderInformationFragment extends Fragment {
                     @Override
                     public void onResponse(Call<OrderModel> call, Response<OrderModel> response) {
                         if (response.isSuccessful()) {
-                            if(!OrderInformationFragment.this.isDetached() && !OrderInformationFragment.this.isRemoving() && OrderInformationFragment.this.getActivity() !=null){
+                            if (!OrderInformationFragment.this.isDetached() && !OrderInformationFragment.this.isRemoving() && OrderInformationFragment.this.getActivity() != null) {
                                 showOrderDetail(response.body());
                             }
 
@@ -184,12 +184,10 @@ public class OrderInformationFragment extends Fragment {
                     order.getOrderStatusId() == Enums.OrderStatusEnum.CANCELED.ordinal() ||
                     order.getOrderStatusId() == Enums.OrderStatusEnum.WaitingProviders.ordinal()) {
                 result = order.getSpecialityName();
-            }
-            else {
+            } else {
                 result = execuationType + " - " + order.getSpecialityName();
             }
-        }
-        else {
+        } else {
             result = execuationType + " - " + order.getSpecialityName();
         }
         return result;
@@ -197,10 +195,9 @@ public class OrderInformationFragment extends Fragment {
 
     private void showOrderDetail(OrderModel order) {
         if (order.getOrderStatusId() == Enums.OrderStatusEnum.WaitingProviders.ordinal() ||
-            order.getOrderStatusId() == Enums.OrderStatusEnum.PENDING.ordinal()) {
+                order.getOrderStatusId() == Enums.OrderStatusEnum.PENDING.ordinal()) {
             scheduling_view.setVisibility(View.GONE);
-        }
-        else {
+        } else {
             scheduling_view.setVisibility(View.VISIBLE);
             execution_type_text_view.setText(Enums.getExecuationtypeString(order.getExecutionTypeEnum()));
             order_updated_on.setText(order.getOrderStatusUpdatedOnString());
@@ -211,8 +208,7 @@ public class OrderInformationFragment extends Fragment {
                 DateUtil parser = DateUtil.newInstance();
                 parser.parse(order.getAgreedTimeOn());
                 order_scheduled_time_textview.setText(parser.getDateTimeString());
-            }
-            else {
+            } else {
                 order_scheduled_time_textview.setText(R.string.no);
             }
         }
@@ -235,20 +231,18 @@ public class OrderInformationFragment extends Fragment {
             DateUtil dateUtil = DateUtil.newInstance();
             dateUtil.parse(order.getDesireOn());
             order_desire_text_view.setText(dateUtil.getDateString());
-        }
-        else {
+        } else {
             order_desire_text_view.setText(R.string.nearest_available_time);
         }
 
         if (!StringUtils.isEmpty(order.getSelectedTime())) {
             order_desire_time_text_view.setText(order.getSelectedTime());
-        }
-        else {
+        } else {
             order_desire_time_text_view.setText(R.string.nearest_available_time);
         }
 
         String status = order.isAcceptFlexibleTime() ?
-               getActivity().getString(R.string.yes) : getActivity().getString(R.string.no);
+                getActivity().getString(R.string.yes) : getActivity().getString(R.string.no);
         order_flex_time_text_view.setText(status);
 
         OrderAddressViewModel address = order.getOrderAddressViewModel();
@@ -272,8 +266,7 @@ public class OrderInformationFragment extends Fragment {
             provider_mobile_text_view.setText(R.string.provider_mobile_number_will_show_after_accepting);
             provider_mobile_text_view.setLinksClickable(false);
             provider_mobile_text_view.setCompoundDrawables(null, null, null, null);
-        }
-        else {
+        } else {
             provider_name_text_view.setText(order.getProviderName());
             provider_mobile_text_view.setText(order.getProviderMobile());
             provider_mobile_text_view.setLinksClickable(true);
@@ -354,10 +347,9 @@ public class OrderInformationFragment extends Fragment {
             FloorType floor = address.getFloorType();
             if (floor != null) {
                 result += " - " +
-                       getActivity().getString(R.string.floor_number)  + " :"  + address.getFloorType().getArabicName();
+                        getActivity().getString(R.string.floor_number) + " :" + address.getFloorType().getArabicName();
             }
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
 
         }
         return result;
@@ -385,8 +377,7 @@ public class OrderInformationFragment extends Fragment {
         if (items == null || items.size() == 0) {
             items_view.setVisibility(View.GONE);
             items_empty_textview.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
             items_view.setVisibility(View.VISIBLE);
             items_empty_textview.setVisibility(View.GONE);
 

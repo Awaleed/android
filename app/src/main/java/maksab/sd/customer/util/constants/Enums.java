@@ -74,8 +74,10 @@ public class Enums {
     public enum OrderTypeEnum {
         ZERO_NOT_USED, Checking, Service, Gallery, // OLD NOT_USED
         Quotation,
-        MaksabPricedService, ProviderPricedService,
-        MaksabOffer, ProviderOffer
+        MaksabPricedService,
+        ProviderPricedService,
+        MaksabOffer,
+        ProviderOffer
     }
 
     public enum OrderUpdateTypeEnum {
